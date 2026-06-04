@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Warframe Relic Tracker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warframe Relic Tracker</title>
+    <link rel="stylesheet" href="/static/css/app.css">
 </head>
 <body>
-  <h1>Warframe Relic Tracker</h1>
-  <p>Frontend coming soon.</p>
+    <div class="container">
+        <div class="header">
+            <h1>Warframe Relic Tracker</h1>
+            <p class="subtitle">Track your Void Relic collection and Ducat values</p>
+        </div>
+
+        <div class="nav" id="main-nav">
+            <a href="#dashboard" class="nav-link active" data-view="dashboard">Dashboard</a>
+            <a href="#relics" class="nav-link" data-view="relics">Relics</a>
+            <a href="#collection" class="nav-link" data-view="collection">Collection</a>
+        </div>
+
+        <div class="toolbar">
+            <button class="btn" id="sync-btn" onclick="syncData()">Sync Data</button>
+            <span class="toolbar-text" id="sync-status"></span>
+        </div>
+
+        <div id="content">
+            <div class="loading">Loading...</div>
+        </div>
+
+        <div id="modal-overlay" class="modal-overlay" style="display: none;">
+            <div class="modal" id="modal-content"></div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2005 Warframe Relic Tracker. All rights reserved. Data from Warframe Market &amp; WFCD.</p>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
 </body>
 </html>
