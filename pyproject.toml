@@ -1,0 +1,25 @@
+[project]
+name = "warframe-relic-tracker"
+version = "0.1.0"
+description = "Track Warframe relic collections with ducat values and market prices"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.34.0",
+    "httpx>=0.28.0",
+    "jinja2>=3.1.0",
+    "aiosqlite>=0.20.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.25.0",
+    "ruff>=0.9.0",
+]
+build = [
+    "pyinstaller>=6.0.0",
+]
+
+[project.scripts]
+relic-tracker = "src.main:run"
